@@ -107,7 +107,7 @@
                     <targetPackage>com.gamedoora.gamedooraservices.model</targetPackage>
                     <sourceType>json</sourceType>
                     <targetVersion>1.8</targetVersion>
-                    <outputDirectory>${basedir}/src/main/java</outputDirectory>
+                    <removeOldOutput>true</removeOldOutput>
                     <useCommonsLang3>true</useCommonsLang3>
                 </configuration>
                 <executions>
