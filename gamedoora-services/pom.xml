@@ -99,6 +99,26 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                <version>1.0.2</version>
+                <configuration>
+                    <sourceDirectory>${basedir}/src/main/resources/model</sourceDirectory>
+                    <targetPackage>com.gamedoora.gamedooraservices.model</targetPackage>
+                    <sourceType>json</sourceType>
+                    <targetVersion>1.8</targetVersion>
+                    <removeOldOutput>true</removeOldOutput>
+                    <useCommonsLang3>true</useCommonsLang3>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
